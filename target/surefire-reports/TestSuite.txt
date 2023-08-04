@@ -1,4 +1,20 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.045 s - in TestSuite
+Tests run: 8, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 113.325 s <<< FAILURE! - in TestSuite
+loginDDT(com.inetbanking.testCases.TC_LoginDDT_002)  Time elapsed: 7.09 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.inetbanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:29)
+
+loginDDT(com.inetbanking.testCases.TC_LoginDDT_002)  Time elapsed: 6.463 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.inetbanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:29)
+
+loginDDT(com.inetbanking.testCases.TC_LoginDDT_002)  Time elapsed: 6.589 s  <<< FAILURE!
+java.lang.AssertionError
+	at com.inetbanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:29)
+
+loginDDT(com.inetbanking.testCases.TC_LoginDDT_002)  Time elapsed: 0.02 s  <<< FAILURE!
+java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at com.inetbanking.testCases.TC_LoginDDT_002.loginDDT(TC_LoginDDT_002.java:17)
+

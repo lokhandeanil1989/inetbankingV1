@@ -3,7 +3,7 @@ package com.inetbanking.testCases;
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
-
+import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
@@ -19,6 +19,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 import com.inetbanking.utilities.ReadConfig;
+
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
 public class BaseClass 
 {
@@ -55,6 +59,7 @@ public class BaseClass
 		}
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get(baseURL);
+		driver.manage().window().maximize();
 	}
 
 	@AfterClass
@@ -65,11 +70,15 @@ public class BaseClass
 
 	public void captureScreen(WebDriver driver,String tname) throws IOException 
 	{
-		TakesScreenshot ts = (TakesScreenshot) driver;
+		/*TakesScreenshot ts = (TakesScreenshot) driver;
 		File Source = ts.getScreenshotAs(OutputType.FILE);
 		File target = new File(System.getProperty("user.dir")+ "/screenshots/" + tname + ".png");
 		FileUtils.copyFile(Source, target);
-		System.out.println("Screenshot taken");
+		System.out.println("Screenshot taken");*/
+		
+		Screenshot screenshot=new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+		ImageIO.write(screenshot.getImage(), "png", new File(System.getProperty("user.dir")+ "/screenshots/" + tname + ".png"));
+		
 	}
 
 	public String randomstring()

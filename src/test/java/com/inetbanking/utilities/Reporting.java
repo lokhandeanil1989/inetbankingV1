@@ -30,6 +30,7 @@ public class Reporting extends TestListenerAdapter
 	{
 		String timstamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()); //time stamp
 		String repName="Test-Report-"+timstamp+".html";
+		
 		htmlReporter=new ExtentSparkReporter(System.getProperty("user.dir")+ "/test-output/"+repName);//Specify location
 		try {
 			htmlReporter.loadXMLConfig(System.getProperty("user.dir")+ "/extent-config.xml");

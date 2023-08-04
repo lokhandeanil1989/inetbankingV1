@@ -1,5 +1,6 @@
- <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
- <suite name="InternetBankingV1">
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="InternetBankingV1">
 	<listeners>
 		<listener class-name="com.inetbanking.utilities.Reporting" />
 	</listeners>
@@ -7,8 +8,8 @@
 		<parameter name="browser" value="chrome" />
 		<classes>
 			<class name="com.inetbanking.testCases.TC_LoginTest_001" />
-		<!--	 <class name="com.inetbanking.testCases.TC_LoginDDT_002" /> -->
-		<!--	<class name="com.inetbanking.testCases.TC_AddCustomerTest_003" />  -->
+			<class name="com.inetbanking.testCases.TC_LoginDDT_002" />
+			<class name="com.inetbanking.testCases.TC_AddCustomerTest_003" />
 
 		</classes>
 	</test>

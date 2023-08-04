@@ -5,10 +5,6 @@
         <!-- standard, dark -->
         <theme>DARK</theme>
     
-        <!-- enables timeline -->
-        <!-- defaults to true -->
-        <enableTimeline>true</enableTimeline>
-	
         <!-- document encoding -->
         <!-- defaults to UTF-8 -->
         <encoding>UTF-8</encoding>
@@ -18,11 +14,15 @@
         <protocol>https</protocol>
         
         <!-- title of the document -->
-        <documentTitle>Extent Framework</documentTitle>
+        <documentTitle>Extent</documentTitle>
         
         <!-- report name - displayed at top-nav -->
-        <reportName>Build 1</reportName>
-
+        <reportName>Automation Report</reportName>
+        
+        <!-- location of charts in the test view -->
+        <!-- top, bottom -->
+        <testViewChartLocation>bottom</testViewChartLocation>
+		
         <!-- custom javascript -->
         <scripts>
             <![CDATA[
