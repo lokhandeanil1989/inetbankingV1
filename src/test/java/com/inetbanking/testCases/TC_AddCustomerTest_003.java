@@ -24,7 +24,7 @@ public class TC_AddCustomerTest_003 extends BaseClass
 
 		addcust.clickAddNewCustomer();
 		
-		logger.info("Providing customer details...");
+		logger.info("Providing customer details ....");
 		addcust.custName("Anil");
 		addcust.custgender("Male");
 		addcust.custdob("02","21","1989");

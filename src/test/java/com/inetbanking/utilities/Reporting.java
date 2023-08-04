@@ -44,7 +44,7 @@ public class Reporting extends TestListenerAdapter
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("Host name", "localhost");
 		extent.setSystemInfo("Environemnt", "QA");
-		extent.setSystemInfo("user","Anil");
+		extent.setSystemInfo("User","Anil");
 
 		htmlReporter.config().setDocumentTitle("InernetBanking Test Project"); //Title of report
 		htmlReporter.config().setReportName("Functional Test Automation Report"); //Name of the report
